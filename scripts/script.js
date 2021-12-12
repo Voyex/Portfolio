@@ -18,9 +18,6 @@ function typeWriter() {
 
     function addChars() {
 
-        console.log()
-        console.log("here");
-
         if (typedConent === content) {
             clearInterval(loop);
 
@@ -28,8 +25,25 @@ function typeWriter() {
             typedConent += content[i];
             elem.innerText = typedConent;
             i++;
-            console.log(typedConent);
         }
+    }
+}
+
+function headerColor() {
+    const scrollPos = window.scrollY;
+    const elem = document.getElementById("intro");
+    var bottom = elem.getBoundingClientRect().bottom;
+
+    const root = document.querySelector(":root");
+    const rootStyles = getComputedStyle(root);
+
+    //Changes header color based on position of intro elem
+    if (bottom <= -50) {
+        root.style.setProperty("--headerColor", "white");
+        root.style.setProperty("--headerFontColor", "black");
+    } else {
+        root.style.setProperty("--headerColor", "black");
+        root.style.setProperty("--headerFontColor", "white");
     }
 }
 

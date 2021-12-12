@@ -32,6 +32,8 @@
 
 :root {
     --supportingColor: #0066ff;
+    --headerColor: black;
+    --headerFontColor: white;
 }
 /* Mobile CSS */
 
@@ -45,16 +47,12 @@ body {
     font-family: Roboto-Light, sans-serif;
 }
 
-a {
-    color: white;
-    text-decoration: none;
-}
 
 header {
     z-index: 2;
     position: fixed;
     width: 100%;
-    color: white;
+    color: var(--headerFontColor);
     font-family:Roboto-Thin, sans-serif;
     display: flex;
     justify-content: space-between;
@@ -62,8 +60,13 @@ header {
     flex-wrap: wrap;
 }
 
+header a {
+    color: var(--headerFontColor);
+    text-decoration: none;
+}
+
 header > * {
-    background-color: black;
+    background-color: var(--headerColor);
 }
 
 .top-bar {
@@ -91,7 +94,7 @@ header > * {
 }
 
 .button-label .bar {
-    background-color: white;
+    background-color: var(--headerFontColor);
     width: 100%;
     height: 3px;
 }
@@ -131,7 +134,7 @@ header > * {
 
 .first, .middle {
     z-index: 1;
-    background-color: black;
+    background-color: var(--headerColor);
 }
 
 .last {
@@ -249,12 +252,12 @@ footer{
 
 @keyframes show-left {
     0% {
-        color: white;
+        color: var(--headerFontColor);
     }
     48% {
         transform: translateX(5.1em);
         transform-origin: left;
-        color: white;
+        color: var(--headerFontColor);
     }
     /* 66% {
         transform: translateX(90.5px);
@@ -262,7 +265,7 @@ footer{
     } */
     81% {
         transform: translateX(5.1em);
-        color: white;
+        color: var(--headerFontColor);
     }
     100% {
         transform: translateX(5.1em);
@@ -274,7 +277,7 @@ footer{
 /* Media tag for desktop users */
 @media (min-width: 1280px) {
     header {
-        background-color: black;
+        background-color: var(--headerColor);
     }
 
     .top-bar {
