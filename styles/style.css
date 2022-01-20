@@ -1,20 +1,6 @@
-@font-face {
-    font-family: Roboto;
-    src: url("../files/Roboto/Roboto-Regular.ttf");
-}
-@font-face {
-    font-family: Roboto-Thin;
-    src: url("../files/Roboto/Roboto-Thin.ttf");
-}
-@font-face {
-    font-family: Roboto-Light;
-    src: url("../files/Roboto/Roboto-Light.ttf");
-}
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@100;300;400&display=swap');
 
-@font-face {
-    font-family: Roboto-Mono;
-    src: url("../files/Roboto-Mono/RobotoMono-VariableFont_wght.ttf");
-}
 
 /* Mobile Animations */
 @keyframes blink {
@@ -46,7 +32,8 @@ body {
     padding: 0;
     margin: 0;
     background-color: white;
-    font-family: Roboto-Light, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
     width: 100%;
     height: 100%;
 }
@@ -57,7 +44,8 @@ header {
     position: fixed;
     width: 100%;
     color: var(--headerFontColor);
-    font-family:Roboto-Thin, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,7 +57,8 @@ header button {
     background-color: var(--headerColor);
     border: none;
     color: var(--headerFontColor);
-    font-family: Roboto-Thin;
+    font-family: 'Roboto';
+    font-weight: 100;
     font-size: 1em;
 }
 
@@ -194,7 +183,7 @@ main {
     color: var(--supportingColor);
     font-size: 2em;
     width: 100%;
-    font-family: Roboto-Mono, 'Courier New', Courier, monospace;
+    font-family: 'Roboto-Mono', 'Courier New', Courier, monospace;
     animation: typing 2s steps(32, end) forwards;
 }
 
@@ -204,7 +193,7 @@ main {
     font-size: 1.25em;
     font-weight: 400;
     color: white;
-    font-family: Roboto;
+    font-family: 'Roboto';
 }
 
 .about {
@@ -244,9 +233,10 @@ main {
 
 /* Skills Section */
 .skills {
-    background: url("../files/schematic-vertical.jpg") no-repeat center center fixed;
+    background: url("../files/schematic-vertical.webp") no-repeat center center fixed;
     min-height: 100vh;
     background-size: cover;
+    position: relative;
 
 }
 
@@ -257,7 +247,7 @@ main {
     justify-content: center;
     text-align: center;
     color: white;
-    font-family: Roboto;  
+    font-family: 'Roboto';  
 }
 
 .top-arrow {
@@ -325,6 +315,8 @@ main {
     background-image: url('../files/transparent-arrow.svg');
     background-size: contain;
     background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
 }
 
 .projects-list {
@@ -436,7 +428,7 @@ footer{
     }
 
     .skills {
-        background-image: url("../files/schematic-horizontal.jpg");
+        background-image: url("../files/schematic-horizontal.webp");
     }
 
     .skills-section {
