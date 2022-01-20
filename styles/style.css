@@ -321,7 +321,8 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    width: 80vw;
 }
 
 .project {
@@ -339,7 +340,7 @@ main {
 
     color: white;
     text-decoration: none;
-    margin: 20px 50px;
+    margin: 30px 0;
 }
 
 .consortium {
