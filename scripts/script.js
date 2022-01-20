@@ -137,3 +137,10 @@ function headerColor() {
         root.style.setProperty("--headerFontColor", "white");
     }
 }
+
+function loadCSS(path) {
+    const css = document.createElement('link');
+    css.rel = "stylesheet";
+    css.href = path;
+    document.head.appendChild(css);
+}
