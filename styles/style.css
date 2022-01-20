@@ -232,7 +232,10 @@ main {
 .skills {
     background: url("../files/schematic-vertical.webp") no-repeat center center fixed;
     background-size: cover;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 
 }
 
@@ -311,8 +314,6 @@ main {
     background-image: url('../files/transparent-arrow.svg');
     background-size: contain;
     background-repeat: no-repeat;
-    position: absolute;
-    bottom: 0;
 }
 
 .projects-list {
