@@ -251,7 +251,7 @@ main {
 
 .top-arrow {
     height: 4vw;
-    width: 100vw;
+    width: 100%;
     background-image: url('../files/white-arrow.svg');
     background-size: contain;
     background-repeat: no-repeat;
@@ -310,7 +310,7 @@ main {
 }
 .bottom-arrow {
     height: 4vw;
-    width: 100vw;
+    width: 100%;
     background-image: url('../files/transparent-arrow.svg');
     background-size: contain;
     background-repeat: no-repeat;
