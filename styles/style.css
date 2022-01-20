@@ -36,15 +36,19 @@
     --headerFontColor: white;
 }
 /* Mobile CSS */
+html {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
 
 body {
     padding: 0;
     margin: 0;
-    background-color: gainsboro;
-    /* background: -webkit-linear-gradient(bottom left, #010101, #323232);
-    background: -moz-linear-gradient(bottom left, #010101, #323232);
-    background: linear-gradient(to top right, #010101, #323232); */
+    background-color: white;
     font-family: Roboto-Light, sans-serif;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -58,6 +62,15 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    min-height: 50px;
+}
+
+header button {
+    background-color: var(--headerColor);
+    border: none;
+    color: var(--headerFontColor);
+    font-family: Roboto-Thin;
+    font-size: 1em;
 }
 
 header a {
@@ -103,15 +116,11 @@ header > * {
     z-index: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-self: center;
     flex-basis: 100%;
-    transform: translateY(-59px);
-    transition: all .5s ease-in-out;
-}
-
-.nav-links.active {
-    transform: translateY(0);
+    overflow: hidden;
+    height: 0;
 }
 
 .nav-link {
@@ -201,12 +210,12 @@ main {
 .about {
     min-height: fit-content;
     color: black;
-    background-color: white;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
 }
 
 .about h1 {
@@ -217,15 +226,129 @@ main {
     border-bottom: 2px solid var(--supportingColor);
 }
 
+.title {
+    width: 80vw;
+    margin: 0;
+    padding-bottom: .15em;
+    margin-bottom: .5em;
+    border-bottom: 2px solid var(--supportingColor);  
+}
+
 .about h3 {
     margin: 0;
+    padding: 0;
     width: 80vw;
+}
+
+
+
+/* Skills Section */
+.skills {
+    background: url("../files/schematic-vertical.jpg") no-repeat center center fixed;
+    min-height: 100vh;
+    background-size: cover;
+
+}
+
+.skills-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-family: Roboto;  
+}
+
+.top-arrow {
+    height: 4vw;
+    width: 100vw;
+    background-image: url('../files/white-arrow.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.content {
+    margin: 50px 0;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-section {
+    display: grid;
+    width: 100%;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: min-content;
+    margin: 30px 0;
+    padding: 10px;
+    transition: all .25s ease-in-out;
+}
+
+.active,
+.skill:hover {
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    transform: scale(1.2);
+}
+
+.skill-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    width: 6em;
+}
+
+.skill-bar {
+    width: 10em;
+    height: 0.5em;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    background-color: var(--supportingColor);
+    height: 1em;
+}
+.bottom-arrow {
+    height: 4vw;
+    width: 100vw;
+    background-image: url('../files/transparent-arrow.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project {
+    width: 80vw;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.project-image {
+    height: 200px;
+    overflow: hidden;
 }
 
 
 /* Start of footer */
 footer{
-    color: black;
+    background-color: black;
+    color: white;
 }
 
 /* End of mobile CSS */
@@ -307,10 +430,20 @@ footer{
     }
 
     .nav-links {
-        transition: none;
-        transform: translateY(0);
         flex-basis: auto;
         flex-direction: row;
+        height: min-content;
     }
-    
+
+    .skills {
+        background-image: url("../files/schematic-horizontal.jpg");
+    }
+
+    .skills-section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .skill {
+        margin: 50px 0;
+    }
 }

@@ -5,32 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css" type="text/css">
-    <title>Document</title>
+    <link rel="icon" href="./files/favicon.ico" type="image/x-icon">
+    
+    <title>Mitchell Haley - Portfolio</title>
+    <meta name="description" content="A portfolio page for the computer science student Mitchell Haley">
+    <meta name="keywords" content="computer science, CS, portfolio, portfolio website, projects, github, personal, website, student, project">
+    <meta name="author" content="Mitchell Haley">
 </head>
-<body onload="typeWriter()" onscroll="headerColor(this);">
+<body onload="typeWriter(); goFullscreen();" onscroll="headerColor(); mobileSkillScroll();">
     <script src="scripts/script.js"></script>
 
     <header id="header">
         <div class="top-bar">
-            <a class="name" href="index.html">
+            <button class="name" onclick="toggleDropdown('close'); goTo('intro');">
                 <p class="first">MITC</p>
                 <p class="middle">H</p>
                 <p class="last">ELL</p>
                 <p class="lastname">HALEY</p>
-            </a>
+            </button>
 
-            <input type="checkbox" class="nav-button" id="nav-button" name="nav-button" onclick="toggleButton();" autocomplete="off" />
-            <label for="nav-button" class="button-label"> 
+            <input type="button" class="nav-button" id="nav-button" name="nav-button" />
+            <label for="nav-button" class="button-label" tabindex="0" onclick="toggleDropdown();" onkeypress="toggleDropdown();"> 
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </label>
         </div>
         <div class="nav-links" id = "nav-links">
-            <a class="nav-link" href="projects.html">Projects</a>
-            <a class="nav-link" href="about.html">About</a>
+            <button class="nav-link" onclick="toggleDropdown('close'); goTo('about');">About</button>
+                <button class="nav-link" onclick="toggleDropdown('close'); goTo('skills');">Skills</button>
+            <button class="nav-link" onclick="toggleDropdown('close'); goTo('projects');">Projects</button>
+            <button class="nav-link" onclick="toggleDropdown('close'); goTo('contact');">Contact</button>
         </div>
-
     </header>
 
 
@@ -38,31 +44,138 @@
         <div class="intro" id="intro">
             <div class="content">
 
-                <h1 class="typed" id="typed" >Hello World! I'm Mitchell Haley.</h1>
+                <h1 class="typed" id="typed">Hello World! I'm Mitchell Haley.</h1>
                 <h2>A computer science student and aspring software engineer</h2>
             </div>
         </div>
 
         <div class="about">
-            <h1>About Me</h1>
-            <h3>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec ante et lacus porttitor 
-                sagittis eget at ipsum. Curabitur placerat id risus ut mattis. Suspendisse interdum ut libero 
-                non mollis. Fusce sem diam, placerat ac massa at, lacinia auctor odio. Etiam sed interdum orci, 
-                ac imperdiet ex. Donec a ligula viverra, iaculis metus sed, eleifend lectus. Donec nec turpis 
-                dictum, cursus mauris ut, lacinia turpis. Mauris metus elit, interdum ullamcorper elementum at, 
-                pulvinar a enim. Maecenas facilisis molestie nisl at fringilla. Nulla tincidunt eleifend laoreet. 
-                Proin maximus sollicitudin fringilla. Ut id posuere magna. Duis consectetur cursus eros eget 
-                suscipit. Nullam convallis augue velit, et consequat velit ullamcorper nec. Vestibulum volutpat 
-                orci sed sem faucibus, nec laoreet lacus accumsan. 
-            </h3>
+            <div class="content" id="about">
+                <h1 class="title">About Me</h1>
+                <h3>
+                    I am a Computer Science student at the University of Wisconsin - Eau Claire.
+                    I am expecting to graduate in May of 2023. My passions include Web Development and Deep/Machine Learning.
+                    I enjoy the process of Web Development as it allows for me to be creative and I find the development
+                    process unique and challenging. Every time I create something new, I need to devise the best way 
+                    to acheive the desired outcome.
+                </h3>
+            </div>
+        </div>
+
+        <div class="skills">
+            <div class="top-arrow"></div>
+
+            <div class="skills-content content" id="skills">
+                <h1 class="title">Skills</h1>
+
+                <div class="skills-section">
+                    <div class="grid-item">
+                        <div class="skill">
+                            <div class="skill-title">HTML</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item">    
+                        <div class="skill">
+                            <div class="skill-title">CSS</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width:80%;"></div>
+                            </div>
+                        </div>  
+                    </div>   
+                    <div class="grid-item">
+                        <div class="skill">
+                            <div class="skill-title">Javascript</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="skill">
+                            <div class="skill-title">Node.js</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 30%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="skill">
+                            <div class="skill-title">MySQL</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="skill">
+                            <div class="skill-title">MongoDB</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 40%;"></div>
+                            </div>
+                        </div>   
+                    </div>  
+                    <div class="grid-item">  
+                        <div class="skill">
+                            <div class="skill-title">Python</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%;"></div>
+                            </div>
+                        </div>   
+                    </div>
+                    <div class="grid-item">  
+                        <div class="skill">
+                            <div class="skill-title">TensorFlow</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%;"></div>
+                            </div>
+                        </div>  
+                    </div>  
+                    <div class="grid-item">  
+                        <div class="skill">
+                            <div class="skill-title">Java</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-arrow"></div>
+        </div>
+
+        <div class="projects" id="projects">
+           <div class="content">
+               <h1 class="title">Projects</h1>
+
+               <div class="projects-list">
+                   <a class="project" href="https://www.ensemble-consortium.org/" target="_blank">
+                        
+                        <div class="project-image">
+                            <img src="files/projects/Consortium-Mobile.png" alt="Image of a project called 'Consortium'">
+                        </div>
+                       <div class="project-info">
+                            <div class="project-title">Consortium</div>
+                            <div class="project-description">
+                                The Consortium project was created for a clients music group named 'Consortium'.
+                                This was my first ever serious full stack web development project. I like some things from the project but overall,
+                                it is rough around the edges. My and the client are currently working together to make sure that it is to their
+                                liking. Further work will likely involve overhauls of the layout and additional backend and administrative features.
+                            </div>
+                       </div>
+                   </a>
+               </div>
+           </div>
         </div>
 
     </main>
 
 
-    <footer>
-        <p>&copy; 2019 Mitchell Haley</p>
+    <footer id="contact">
+        <p>&copy; 2021-2022 Mitchell Haley</p>
     </footer>
 </body>
 </html>
