@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css" type="text/css">
+    
+    <link rel="stylesheet" href="/styles/style.css" type="text/css">
+    <link rel="stylesheet" href="/styles/desktop-style.css" type="text/css" media="(min-width: 1280px)">
     <link rel="icon" href="./files/favicon.ico" type="image/x-icon">
     
     <title>Mitchell Haley - Portfolio</title>
@@ -12,7 +14,7 @@
     <meta name="keywords" content="computer science, CS, portfolio, portfolio website, projects, github, personal, website, student, project">
     <meta name="author" content="Mitchell Haley">
 </head>
-<body onload="typeWriter(); goFullscreen();" onscroll="headerColor(); mobileSkillScroll();">
+<body onload="typeWriter();" onscroll="headerColor(); mobileSkillScroll();">
     <script src="scripts/script.js"></script>
 
     <header id="header">
@@ -52,13 +54,13 @@
         <div class="about">
             <div class="content" id="about">
                 <h1 class="title">About Me</h1>
-                <h3>
+                <p>
                     I am a Computer Science student at the University of Wisconsin - Eau Claire.
                     I am expecting to graduate in May of 2023. My passions include Web Development and Deep/Machine Learning.
                     I enjoy the process of Web Development as it allows for me to be creative and I find the development
                     process unique and challenging. Every time I create something new, I need to devise the best way 
                     to acheive the desired outcome.
-                </h3>
+                </p>
             </div>
         </div>
 
@@ -152,21 +154,36 @@
                <h1 class="title">Projects</h1>
 
                <div class="projects-list">
-                   <a class="project" href="https://www.ensemble-consortium.org/" target="_blank" rel=”noreferrer”>
-                        
-                        <div class="project-image">
-                            <img src="" alt="Image of a project called 'Consortium'">
-                        </div>
-                       <div class="project-info">
+                   <a class="project consortium" href="https://www.ensemble-consortium.org/" target="_blank" rel=”noreferrer”>
+                        <div class="project-info">
                             <div class="project-title">Consortium</div>
                             <div class="project-description">
-                                The Consortium project was created for a clients music group named 'Consortium'.
-                                This was my first ever serious full stack web development project. I like some things from the project but overall,
-                                it is rough around the edges. My and the client are currently working together to make sure that it is to their
+                                The Consortium project was created for a clients music group named 'Consortium'. This was my first ever serious 
+                                full stack web development project. My and the client are currently working together to make sure that it is to their
                                 liking. Further work will likely involve overhauls of the layout and additional backend and administrative features.
                             </div>
                        </div>
                    </a>
+
+                   <a class="project tip-calculator" href="/projects/tip-calculator.html" target="_blank" rel=”noreferrer”>
+                        <div class="project-info">
+                            <div class="project-title">Tip Calculator</div>
+                            <div class="project-description">
+                                This project is a simple tip calculator that is able to calculate a tip's amount and how it should be split amongst
+                                friends. This projects is based on HTML, CSS, and JS. It is a part of a series of projects that I made based on designs from Frontend Mentor.
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a class="project order-summary" href="/projects/order-summary.html" target="_blank" rel=”noreferrer”>
+                        <div class="project-info">
+                            <div class="project-title">Order Summary</div>
+                            <div class="project-description">
+                                This project is a simple tip calculator that is able to calculate a tip's amount and how it should be split amongst
+                                friends. This projects is based on HTML, CSS, and JS. It is a part of a series of projects that I made based on designs from Frontend Mentor.
+                            </div>
+                        </div>
+                    </a>
                </div>
            </div>
         </div>

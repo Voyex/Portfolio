@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --desaturated-bright-blue: hsl(245, 50%, 52%);
+    --very-pale-blue: hsla(228, 100%, 98%, 0.795);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --light-desaturated-blue: hsl(224, 23%, 80%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    font-family: "Red Hat Display";
+    font-size: 16px;
+    color: var(--desaturated-blue);
+    font-weight: 900;
+}
+
+body {
+    background-color: var(--pale-blue);
+    min-height: 100vh;
+    background-image: url('/files/projects/order-summary/pattern-background-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 90vw;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 20px var(--light-desaturated-blue);
+}
+
+.card .top-image{
+    width: 100%;
+    border-radius: 20;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px;
+    flex: 2;
+}
+
+.card-content > *  {
+    padding: 0;
+    margin: 10px;
+}
+
+.card-content p {
+    font-weight: 700;
+    line-height: 30px;
+}
+
+h1 {
+    color: var(--dark-blue);
+    font-size: 28px;
+}
+
+.subscription {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--very-pale-blue);
+    width: 100%;
+}
+
+.subscription > * {
+    padding: 20px 0 20px 0;
+    box-sizing: border-box;
+}
+
+.subscription .plan {
+    margin-left: -20px;
+    margin-right: 20px;
+
+}
+
+.plan {
+    text-align: left;
+}
+
+.plan p, h3{
+    padding: 0;
+    margin: 0;
+}
+
+.plan p {
+    font-weight: 500;
+}
+
+.plan h3 {
+    color: var(--dark-blue);
+}
+
+.subscription {
+    border-radius: 10px;
+}
+
+.subscription a {
+    color: var(--bright-blue);
+}
+
+.subscription a:active {
+    color: var(--desaturated-bright-blue);
+    text-decoration: none;
+}
+
+.payment {
+    background-color: var(--bright-blue);
+    width: 100%;
+    text-align: center;
+    padding: 15px 0 15px 0;
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 25px 25px 0 var(--pale-blue);
+}
+
+.payment:active {
+    background-color: var(--desaturated-bright-blue);
+}
+
+.cancel {
+    color: var(--desaturated-blue);
+    text-decoration: none;
+}
+
+.cancel:active {
+    color: var(--dark-blue);
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+@media (min-width: 550px) {
+    .card {
+        width: 500px;
+        height: 800px;
+    }
+}
+@media (min-width: 1440px) {
+    body {
+        background-image: url("/files/projects/order-summary/pattern-background-desktop.svg");
+    }
+    
+    .card {
+        width: 500px;
+        height: 800px;
+    }
+
+    .card-content {
+        margin: 20px 50px 20px 50px;
+    }
+
+    .card-content > * {
+        margin-top: -10px;
+        margin-bottom: -10px;
+    }
+
+    .card-content h1 {
+        margin-bottom: -30px;
+    }
+
+}

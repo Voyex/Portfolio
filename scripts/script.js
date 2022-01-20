@@ -137,7 +137,3 @@ function headerColor() {
         root.style.setProperty("--headerFontColor", "white");
     }
 }
-
-function goFullscreen() {
-    document.addEventListener("touchmove", function(e) { e.preventDefault() });
-}

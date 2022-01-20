@@ -44,6 +44,7 @@ header {
     position: fixed;
     width: 100%;
     color: var(--headerFontColor);
+    background-color: var(--headerColor);
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
     display: flex;
@@ -60,11 +61,6 @@ header button {
     font-family: 'Roboto';
     font-weight: 100;
     font-size: 1em;
-}
-
-header a {
-    color: var(--headerFontColor);
-    text-decoration: none;
 }
 
 header > * {
@@ -109,7 +105,7 @@ header > * {
     align-self: center;
     flex-basis: 100%;
     overflow: hidden;
-    height: 0;
+    height: 0
 }
 
 .nav-link {
@@ -118,8 +114,8 @@ header > * {
     background-color: transparent;
 }
 
-.nav-link:active, .nav-link:hover {
-    color: var(--supportingColor);
+.nav-link:active,.nav-link:hover {
+    color: var(--supportingColor)
 }
 
 .name {
@@ -223,10 +219,11 @@ main {
     border-bottom: 2px solid var(--supportingColor);  
 }
 
-.about h3 {
+.about p {
     margin: 0;
     padding: 0;
     width: 80vw;
+    font-size: 1.5em;
 }
 
 
@@ -234,7 +231,6 @@ main {
 /* Skills Section */
 .skills {
     background: url("../files/schematic-vertical.webp") no-repeat center center fixed;
-    min-height: 100vh;
     background-size: cover;
     position: relative;
 
@@ -321,19 +317,64 @@ main {
 
 .projects-list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
 
 .project {
-    width: 80vw;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-content: center;
+    justify-content: center;
+
+    width: 400px;
+    height: 600px;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 20px;
+    background-color: black;
+    background-size: cover;
+
+    color: white;
+    text-decoration: none;
+    margin: 20px 50px;
 }
 
-.project-image {
-    height: 200px;
-    overflow: hidden;
+.consortium {
+    background-image: url(../files/projects/consortium/Consortium.webp);
+}
+
+.tip-calculator {
+    background-image: url(../files/projects/tip-calculator/Tip-Calculator.webp);
+}
+
+.order-summary {
+    background-image: url(../files/projects/order-summary/Order-Summary.webp);
+}
+
+.project-info {
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.project-title {
+    font-size: 2em;
+    width: 80%;
+    border-bottom: 1px solid var(--supportingColor);
+    margin: 10px 0;
+}
+
+.project-description {
+    font-weight: 300;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    width: 80%;
 }
 
 
@@ -347,7 +388,6 @@ footer{
 
 /* Desktop Animations */
 @keyframes hide-left {
-    0% {}
     11% {
         transform: translateX(0);
       }
@@ -389,53 +429,8 @@ footer{
 
 }
 
-/* Media tag for desktop users */
-@media (min-width: 1280px) {
-    header {
-        background-color: var(--headerColor);
-    }
-
-    .top-bar {
-        width: auto;
-    }
-
-    .lastname {
-        animation: none;
-        }
-
-    .last {
-        animation: none;
-    }
-    
-    .name:hover .last {
-        animation: hide-left 1.5s ease-in;
-        animation-fill-mode: forwards; 
-    }
-    
-    .name:hover .lastname {
-        animation: show-left 1.3s ease-in .5s;
-        animation-fill-mode: forwards; 
-    }
-
-    .button-label {
-        display: none;
-    }
-
-    .nav-links {
-        flex-basis: auto;
-        flex-direction: row;
-        height: min-content;
-    }
-
-    .skills {
-        background-image: url("../files/schematic-horizontal.webp");
-    }
-
-    .skills-section {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .skill {
-        margin: 50px 0;
+@media (max-width: 450px) {
+    .project {
+        width: 90vw;
     }
 }

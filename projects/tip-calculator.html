@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/styles/tip-style.css">
+  <script type="text/javascript" src="/scripts/tip-script.js"></script>
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body onload="pageRefresh()">
+
+  <img src="/files/projects/tip-calculator/logo.svg" class="logo">
+  
+  <div class="card">
+    <form class="card-content" id="form">
+      <div class="user-field">
+        <div>
+          <div class="field-header">
+            <p>Bill</p>
+            <p class="error" id="bill-error">Enter a Number</p>
+          </div>
+          <i><img src="/files/projects/tip-calculator/icon-dollar.svg" class="icon-svg"></i>
+          <input type="text" placeholder="0" class="text-box" id="bill-total" onkeyup="getBillTotal(this)" />
+        </div>
+        
+        <div>
+          <div class="field-header">
+            <p>Select Tip %</p>
+            <p class="error" id="tip-error">Enter a Number</p>
+          </div>
+          <div class="tip-buttons">
+            <input type="button" class="tip-button" value="5%" id="button-1" onClick="getTipPercentage(this)" />
+            <input type="button" class="tip-button" value="10%" id="button-2" onClick="getTipPercentage(this)" />
+            <input type="button" class="tip-button" value="15%" id="button-3" onClick="getTipPercentage(this)" />
+            <input type="button" class="tip-button" value="25%" id="button-4" onClick="getTipPercentage(this)" />
+            <input type="button" class="tip-button" value="50%" id="button-5" onClick="getTipPercentage(this)" />
+            <input type="text" placeholder="Custom %" id="custom-tip" onClick="getTipPercentage(this)" onkeyup="getTipPercentage(this)" />
+          </div>
+        </div>
+        <div>
+          <div class="field-header">
+            <p>Number of People</p>
+            <p class="error" id="people-error">Enter a Number</p>
+          </div>
+          <i><img src="/files/projects/tip-calculator/icon-person.svg"" class="icon-svg"></i>
+          <input type="text" placeholder="0" class="text-box" id="num-people" onkeyup="getNumPeople(this)" />
+        </div>
+      </div>
+
+      <div class="tip-display">
+        <div class="tip-display-content">
+          <div class="tip-calc">
+            <div>
+              <h1>Tip Amount</h1>
+              <p>/ person<p>
+            </div>
+
+            <div>
+              <h2 class="tip-amount" id="tip-per-person" >$0.00</h2>
+            </div>
+          
+          </div>
+
+          <div class="tip-calc">
+
+            <div>
+              <h1>Total</h1>
+              <p>/ person<p>
+            </div>
+
+            <div>
+              <h2 class="tip-amount" id="total-per-person">$0.00</h2>
+            </div>
+          </div>
+
+          <input type="reset" value="RESET" onClick="pageRefresh()"/> 
+        </div>
+      </div>      
+    </form>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferer">Frontend Mentor</a>. 
+    Coded by <a href="/index.html">Mitchell Haley</a>.
+  </div>
+</body>
+</html>
