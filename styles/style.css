@@ -40,7 +40,7 @@
     
     
     header {
-        z-index: 2;
+        z-index: 1;
         position: fixed;
         width: 100%;
         color: var(--headerFontColor);
