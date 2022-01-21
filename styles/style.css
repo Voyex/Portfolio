@@ -436,3 +436,60 @@ footer{
         width: 90vw;
     }
 }
+/* Media tag for desktop users */
+@media (min-width: 1280px) {
+    .top-bar {
+        width: auto;
+    }
+
+    .button-label {
+        display: none;
+    }
+
+    .nav-links {
+        flex-basis: auto;
+        flex-direction: row;
+        height: min-content;
+    }
+
+    .skills {
+        background-image: url("../files/schematic-horizontal.webp");
+    }
+
+    .skills-section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .skill {
+        margin: 50px 0;
+    }
+}
+
+/* Media tag for desktop users */
+@media (min-width: 1280px) {
+    .top-bar {
+        width: auto;
+    }
+
+    .button-label {
+        display: none;
+    }
+
+    .nav-links {
+        flex-basis: auto;
+        flex-direction: row;
+        height: min-content;
+    }
+
+    .skills {
+        background-image: url("../files/schematic-horizontal.webp");
+    }
+
+    .skills-section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .skill {
+        margin: 50px 0;
+    }
+}
