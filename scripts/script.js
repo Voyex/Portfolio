@@ -57,10 +57,11 @@ function mobileSkillScroll() {
 
     // The height of a skill
     const skillHeight = skills[0].clientHeight;
+    const headerHeight = 50;
     // The height at which a skill is activated
-    const activationHeight = window.innerHeight / 2 - skillHeight * 2;
+    const activationHeight = window.innerHeight / 2 + (skillHeight / 2);
     // The height at which the skill is deactivated
-    const deactivationHeight = window.innerHeight / 2 - skillHeight * 3;
+    const deactivationHeight = 0;
 
     for(let i = 0; i < skills.length; i++) {
         const topFromTop = skills[i].getBoundingClientRect().top;
