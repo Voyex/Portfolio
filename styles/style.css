@@ -175,13 +175,27 @@ main {
     text-align: center;
 }
 
+.inline h1{
+    display: inline;
+}
+
+
 .typed {
+    text-align: center;
     margin: 0;
     color: var(--supportingColor);
     font-size: 2em;
     width: 100%;
     font-family: 'Roboto-Mono', 'Courier New', Courier, monospace;
-    animation: typing 2s steps(32, end) forwards;
+}
+
+.typed-hidden {
+    color: black;
+    width: min-content;
+    text-align: center;
+    margin: 0;
+    font-size: 2em;
+    font-family: 'Roboto-Mono', 'Courier New', Courier, monospace;
 }
 
 .typed::after {
@@ -196,7 +210,6 @@ main {
 .about {
     min-height: fit-content;
     color: black;
-    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -392,16 +405,6 @@ footer{
     color: white;
 }
 
-.contact-arrow {
-    width: 100%;
-    height: 4vw;
-    background-color: black;
-    background-image: url("/files/white-arrow.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-
-}
-
 .contact-title {
     font-size: 2em;
 }
@@ -414,6 +417,15 @@ footer{
 
     width: 80vw;
     padding: 10px 0;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    flex: 0 0 100%;
+    padding: 10px;
 }
 
 .contact-form input,
@@ -429,16 +441,6 @@ footer{
 .contact-form textarea {
     height: 10em;
 }
-
-.form-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    flex: 0 0 100%;
-    padding: 10px;
-}
-
 .send-button {
     background-color: var(--supportingColor);
     color: white;

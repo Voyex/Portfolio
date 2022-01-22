@@ -97,50 +97,49 @@ function goTo(id) {
 }
 
 function typeWriter() {
-    elem = document.getElementById("typed");
-    const content = elem.innerText;
-
-    let typedConent = "";
-    elem.innerText = "";
-
-    let i = 0;
+    const shown = document.getElementById("shown");
+    const hidden = document.getElementById("hidden")
+    
+    
+    let content = hidden.innerText;
+    let typedContent = "";
 
     var loop = setInterval(addChars, 75);
 
     function addChars() {
 
-        if (typedConent === content) {
+        if (!content) {
             clearInterval(loop);
 
         } else {
-            typedConent += content[i];
-            elem.innerText = typedConent;
-            i++;
+            typedContent += content[0];
+            content = content.substring(1);
+
+            shown.innerText = typedContent;
+            hidden.innerText = content;
         }
     }
 }
 
 function headerColor() {
-    const scrollPos = window.scrollY;
-    const elem = document.getElementById("intro");
-    var bottom = elem.getBoundingClientRect().bottom;
+    const intro = document.getElementById("intro");
+    const contact = document.getElementById("contact");
+    var introBottom = intro.getBoundingClientRect().bottom;
+    var contactTop = contact.getBoundingClientRect().top; 
 
     const root = document.querySelector(":root");
-    const rootStyles = getComputedStyle(root);
 
     //Changes header color based on position of intro elem
-    if (bottom <= 50) {
-        root.style.setProperty("--headerColor", "white");
-        root.style.setProperty("--headerFontColor", "black");
+    if(introBottom <= 50) { 
+        if(contactTop <= 50) {
+            root.style.setProperty("--headerColor", "black");
+            root.style.setProperty("--headerFontColor", "white");
+            return;
+        }
+            root.style.setProperty("--headerColor", "white");
+            root.style.setProperty("--headerFontColor", "black");
     } else {
         root.style.setProperty("--headerColor", "black");
         root.style.setProperty("--headerFontColor", "white");
     }
-}
-
-function loadCSS(path) {
-    const css = document.createElement('link');
-    css.rel = "stylesheet";
-    css.href = path;
-    document.head.appendChild(css);
 }
