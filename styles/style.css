@@ -107,6 +107,10 @@ header > * {
     width: 100%;
     justify-content: space-between;
 }
+
+.top-bar > * {
+    padding: 10px
+}
 .name {
     font-size: 25px;
     width: min-content;
