@@ -5,6 +5,7 @@
     font-family: 'Roboto Mono';
     font-style: normal;
     font-weight: 400;
+    font-display: swap;
     src: url('/files/fonts/roboto-mono-v13-latin-regular.eot'); /* IE9 Compat Modes */
     src: local(''),
          url('/files/fonts/roboto-mono-v13-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -19,6 +20,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 100;
+    font-display: swap;
     src: url('/files/fonts/roboto-v29-latin-100.eot'); /* IE9 Compat Modes */
     src: local(''),
          url('/files/fonts/roboto-v29-latin-100.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -33,6 +35,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
+    font-display: swap;
     src: url('/files/fonts/roboto-v29-latin-300.eot'); /* IE9 Compat Modes */
     src: local(''),
          url('/files/fonts/roboto-v29-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -47,6 +50,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
+    font-display: swap;
     src: url('/files/fonts/roboto-v29-latin-regular.eot'); /* IE9 Compat Modes */
     src: local(''),
          url('/files/fonts/roboto-v29-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -99,7 +103,7 @@ header button {
     background-color: var(--headerColor);
     border: none;
     color: var(--headerFontColor);
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-weight: 100;
     font-size: 1em;
 }
@@ -245,7 +249,7 @@ main {
     font-size: 1.25em;
     font-weight: 400;
     color: white;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
 }
 
 .about {
@@ -302,7 +306,7 @@ main {
     justify-content: center;
     text-align: center;
     color: white;
-    font-family: 'Roboto';  
+    font-family: 'Roboto', sans-serif;  
 }
 
 .top-arrow {
@@ -464,7 +468,7 @@ footer{
 
 .contact-form input,
 .contact-form textarea {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-size: 1.05em;
     padding: 5px;
     width: 100%;
