@@ -21,8 +21,8 @@
     <script defer="defer" src="scripts/script.js"></script>
 
     <header id="header">
-        <div class="top-bar">
-            <button class="name" onclick="toggleDropdown('close'); goTo('intro');">
+        <div class="top-bar flex-center">
+            <button class="name flex-center" onclick="toggleDropdown('close'); goTo('intro');">
                 <p class="first">MITC</p>
                 <p class="middle">H</p>
                 <p class="last">ELL</p>
@@ -30,13 +30,13 @@
             </button>
 
             <input type="button" class="nav-button" id="nav-button" name="nav-button" />
-            <label for="nav-button" class="button-label" tabindex="0" onclick="toggleDropdown();" onkeypress="toggleDropdown();"> 
+            <label for="nav-button" class="button-label flex-center fcol" tabindex="0" onclick="toggleDropdown();" onkeypress="toggleDropdown();"> 
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </label>
         </div>
-        <div class="nav-links" id = "nav-links">
+        <div class="nav-links flex-center fcol" id = "nav-links">
             <button class="nav-link" onclick="toggleDropdown('close'); goTo('about');">About</button>
                 <button class="nav-link" onclick="toggleDropdown('close'); goTo('skills');">Skills</button>
             <button class="nav-link" onclick="toggleDropdown('close'); goTo('projects');">Projects</button>
@@ -46,15 +46,15 @@
 
 
     <main>
-        <div class="intro" id="intro">
+        <div class="intro flex-center fcol" id="intro">
                 <div class="inline">
                     <h1 class="typed" id="shown"></h1><h1 class="typed-hidden" id="hidden">Hello World! I'm Mitchell Haley.</h1>
                 </div>
                 <h2>A computer science student and aspring software engineer</h2>
         </div>
 
-        <div class="about">
-            <div class="content" id="about">
+        <div class="about flex-center fcol">
+            <div class="content flex-center fcol" id="about">
                 <h1 class="title">About Me</h1>
                 <p>
                     I am a Computer Science student at the University of Wisconsin - Eau Claire.
@@ -66,79 +66,79 @@
             </div>
         </div>
 
-        <div class="skills">
+        <div class="skills fcol">
             <div class="top-arrow"></div>
 
-            <div class="skills-content content" id="skills">
+            <div class="skills-content content flex-center fcol" id="skills">
                 <h1 class="title">Skills</h1>
 
                 <div class="skills-section">
-                    <div class="grid-item">
-                        <div class="skill">
+                    <div class="grid-item flex-center">
+                        <div class="skill flex-center fcol">
                             <div class="skill-title">HTML</div>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 90%;"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="grid-item">    
-                        <div class="skill">
+                    <div class="grid-item flex-center">    
+                        <div class="skill flex-center fcol">
                             <div class="skill-title">CSS</div>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width:80%;"></div>
                             </div>
                         </div>  
                     </div>   
-                    <div class="grid-item">
-                        <div class="skill">
+                    <div class="grid-item flex-center">
+                        <div class="skill flex-center fcol">
                             <div class="skill-title">Javascript</div>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 60%;"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="grid-item">
-                        <div class="skill">
+                    <div class="grid-item flex-center">
+                        <div class="skill flex-center fcol">
                             <div class="skill-title">Node.js</div>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 30%;"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="grid-item">
-                        <div class="skill">
+                    <div class="grid-item flex-center">
+                        <div class="skill flex-center fcol">
                             <div class="skill-title">MySQL</div>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 60%;"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="grid-item">
-                        <div class="skill">
+                    <div class="grid-item flex-center">
+                        <div class="skill flex-center fcol">
                             <div class="skill-title">MongoDB</div>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 40%;"></div>
                             </div>
                         </div>   
                     </div>  
-                    <div class="grid-item">  
-                        <div class="skill">
+                    <div class="grid-item flex-center">  
+                        <div class="skill flex-center fcol">
                             <div class="skill-title">Python</div>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 70%;"></div>
                             </div>
                         </div>   
                     </div>
-                    <div class="grid-item">  
-                        <div class="skill">
+                    <div class="grid-item flex-center">  
+                        <div class="skill flex-center fcol">
                             <div class="skill-title">TensorFlow</div>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 80%;"></div>
                             </div>
                         </div>  
                     </div>  
-                    <div class="grid-item">  
-                        <div class="skill">
+                    <div class="grid-item flex-center">  
+                        <div class="skill flex-center fcol">
                             <div class="skill-title">Java</div>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 60%;"></div>
@@ -152,12 +152,12 @@
         </div>
 
         <div class="projects" id="projects">
-           <div class="content">
+           <div class="content flex-center fcol">
                <h1 class="title">Projects</h1>
 
-               <div class="projects-list">
+               <div class="projects-list flex-center">
                    <a class="project consortium" href="https://www.ensemble-consortium.org/" target="_blank" rel=”noreferrer”>
-                        <div class="project-info">
+                        <div class="project-info flex-center fcol">
                             <div class="project-title">Consortium</div>
                             <div class="project-description">
                                 The Consortium project was created for a clients music group named 'Consortium'. This was my first ever serious 
@@ -168,7 +168,7 @@
                    </a>
 
                    <a class="project tip-calculator" href="/projects/tip-calculator.html" rel=”noreferrer”>
-                        <div class="project-info">
+                        <div class="project-info flex-center fcol">
                             <div class="project-title">Tip Calculator</div>
                             <div class="project-description">
                                 This project is a simple tip calculator that is able to calculate a tip's amount and how it should be split amongst
@@ -178,7 +178,7 @@
                     </a>
                     
                     <a class="project order-summary" href="/projects/order-summary.html" rel=”noreferrer”>
-                        <div class="project-info">
+                        <div class="project-info flex-center fcol">
                             <div class="project-title">Order Summary</div>
                             <div class="project-description">
                                 This project is a simple tip calculator that is able to calculate a tip's amount and how it should be split amongst
@@ -193,22 +193,22 @@
     </main>
 
 
-    <footer id="contact">
+    <footer id="contact" class="flex-center fcol">
 
-        <div class="content">
+        <div class="content flex-center fcol">
             <h1 class="title">Contact Me</h1>
 
-            <form name="contact" class="contact-form" method="POST" data-netlify="true">
+            <form name="contact" class="contact-form flex-center" method="POST" data-netlify="true">
                 
-                <div class="form-item">
+                <div class="form-item fcol">
                     <input type="text" name="name" id="contact-name" placeholder="Name">
                 </div>
 
-                <div class="form-item">
+                <div class="form-item fcol">
                     <input type="email" name="email" id="contact-email" placeholder="Email">
                 </div>
 
-                <div class="form-item">
+                <div class="form-item fcol">
                     <textarea name="message" id="contact-message" placeholder="Your Message..."></textarea>
                 </div>
 
@@ -216,7 +216,7 @@
             </form>
         </div>
 
-        <div class="media-links">
+        <div class="media-links flex-center">
             <a href="mailto:mitchhaley5@gmail.com" target="_blank" rel=”noreferrer”>
                 <img src="/files/email.svg" alt="Github" class="icon" style="width:35px; height: 35px;">
             </a>

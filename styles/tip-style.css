@@ -28,6 +28,7 @@ body {
 .home-link {
     display: flex;
     align-items: center;
+    justify-content: center;
     position: fixed;
     top: 10px;
     left: 10px;
