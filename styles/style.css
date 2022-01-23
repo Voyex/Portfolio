@@ -1,7 +1,3 @@
-/* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@100;300;400&display=swap');
-
-
 /* Mobile Animations */
 @keyframes blink {
     0%{opacity: 0;}
