@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
 
 :root {
     --pale-blue: hsl(225, 100%, 94%);
@@ -20,7 +20,7 @@
 body {
     background-color: var(--pale-blue);
     min-height: 100vh;
-    background-image: url('/files/projects/order-summary/pattern-background-mobile.svg');
+    background-image: url("/files/projects/order-summary/pattern-background-mobile.svg");
     background-repeat: no-repeat;
     background-size: 100vw;
     display: flex;
@@ -51,14 +51,14 @@ body {
 }
 
 .home-link p {
-    font-family:'Segoe UI', Verdana, sans-serif;
+    font-family: "Segoe UI", Verdana, sans-serif;
     margin: 2px 0 0 0;
     padding-left: 5px;
     font-size: 24px;
     color: var(--bright-blue);
 }
 
-.card{
+.card {
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -68,7 +68,7 @@ body {
     box-shadow: 0 20px 20px var(--light-desaturated-blue);
 }
 
-.card .top-image{
+.card .top-image {
     width: 100%;
     border-radius: 20;
 }
@@ -82,7 +82,7 @@ body {
     flex: 2;
 }
 
-.card-content > *  {
+.card-content > * {
     padding: 0;
     margin: 10px;
 }
@@ -113,14 +113,14 @@ h1 {
 .subscription .plan {
     margin-left: -20px;
     margin-right: 20px;
-
 }
 
 .plan {
     text-align: left;
 }
 
-.plan p, h3{
+.plan p,
+h3 {
     padding: 0;
     margin: 0;
 }
@@ -170,12 +170,13 @@ h1 {
     color: var(--dark-blue);
 }
 
-.attribution { 
-    font-size: 11px; text-align: center; 
+.attribution {
+    font-size: 11px;
+    text-align: center;
 }
 
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
 
 @media (min-width: 550px) {
@@ -188,7 +189,7 @@ h1 {
     body {
         background-image: url("/files/projects/order-summary/pattern-background-desktop.svg");
     }
-    
+
     .card {
         width: 500px;
         height: 800px;
@@ -206,5 +207,4 @@ h1 {
     .card-content h1 {
         margin-bottom: -30px;
     }
-
 }

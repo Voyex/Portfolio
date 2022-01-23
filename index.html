@@ -1,233 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@100;300;400&display=swap"/> -->
-    <link rel="stylesheet" href="/styles/style.css" />
-    <link rel="shortcut icon" href="/files/favicon.ico" />
-    
-    <title>Mitchell Haley - Portfolio</title>
-    <meta name="description" content="A portfolio page for the computer science student Mitchell Haley">
-    <meta name="keywords" content="computer science, CS, portfolio, portfolio website, projects, github, personal, website, student, project">
-    <meta name="author" content="Mitchell Haley">
-</head>
-<body onload="typeWriter(); goTo('intro'); loadCSS('post-styles.css');" onscroll="headerColor(); mobileSkillScroll();">
-    <script defer="defer" src="scripts/script.js"></script>
+        <link rel="stylesheet" href="/styles/style.css" />
+        <link rel="shortcut icon" href="/files/favicon.ico" />
 
-    <header id="header">
-        <div class="top-bar flex-center">
-            <button class="name flex-center" onclick="toggleDropdown('close'); goTo('intro');">
-                <p class="first">MITC</p>
-                <p class="middle">H</p>
-                <p class="last">ELL</p>
-                <p class="lastname">HALEY</p>
-            </button>
+        <title>Mitchell Haley - Portfolio</title>
+        <meta
+            name="description"
+            content="A portfolio page for the computer science student Mitchell Haley"
+        />
+        <meta
+            name="keywords"
+            content="computer science, CS, portfolio, portfolio website, projects, github, personal, website, student, project"
+        />
+        <meta name="author" content="Mitchell Haley" />
+    </head>
+    <body
+        onload="typeWriter(); goTo('intro'); loadCSS('post-styles.css');"
+        onscroll="headerColor(); mobileSkillScroll();"
+    >
+        <script defer="defer" src="scripts/script.js"></script>
 
-            <input type="button" class="nav-button" id="nav-button" name="nav-button" />
-            <label for="nav-button" class="button-label flex-center fcol" tabindex="0" onclick="toggleDropdown();" onkeypress="toggleDropdown();"> 
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </label>
-        </div>
-        <div class="nav-links flex-center fcol" id = "nav-links">
-            <button class="nav-link" onclick="toggleDropdown('close'); goTo('about');">About</button>
-                <button class="nav-link" onclick="toggleDropdown('close'); goTo('skills');">Skills</button>
-            <button class="nav-link" onclick="toggleDropdown('close'); goTo('projects');">Projects</button>
-            <button class="nav-link" onclick="toggleDropdown('close'); goTo('contact');">Contact</button>
-        </div>
-    </header>
+        <header id="header">
+            <div class="top-bar flex-center">
+                <button
+                    class="name flex-center"
+                    onclick="toggleDropdown('close'); goTo('intro');"
+                >
+                    <p class="first">MITC</p>
+                    <p class="middle">H</p>
+                    <p class="last">ELL</p>
+                    <p class="lastname">HALEY</p>
+                </button>
 
+                <input
+                    type="button"
+                    class="nav-button"
+                    id="nav-button"
+                    name="nav-button"
+                />
+                <label
+                    for="nav-button"
+                    class="button-label flex-center fcol"
+                    tabindex="0"
+                    onclick="toggleDropdown();"
+                    onkeypress="toggleDropdown();"
+                >
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </label>
+            </div>
+            <div class="nav-links flex-center fcol" id="nav-links">
+                <button
+                    class="nav-link"
+                    onclick="toggleDropdown('close'); goTo('about');"
+                >
+                    About
+                </button>
+                <button
+                    class="nav-link"
+                    onclick="toggleDropdown('close'); goTo('skills');"
+                >
+                    Skills
+                </button>
+                <button
+                    class="nav-link"
+                    onclick="toggleDropdown('close'); goTo('projects');"
+                >
+                    Projects
+                </button>
+                <button
+                    class="nav-link"
+                    onclick="toggleDropdown('close'); goTo('contact');"
+                >
+                    Contact
+                </button>
+            </div>
+        </header>
 
-    <main>
-        <div class="intro flex-center fcol" id="intro">
+        <main>
+            <div class="intro flex-center fcol" id="intro">
                 <div class="inline">
-                    <h1 class="typed" id="shown"></h1><h1 class="typed-hidden" id="hidden">Hello World! I'm Mitchell Haley.</h1>
+                    <h1 class="typed" id="shown"></h1>
+                    <h1 class="typed-hidden" id="hidden">
+                        Hello World! I'm Mitchell Haley.
+                    </h1>
                 </div>
-                <h2>A computer science student and aspring software engineer</h2>
-        </div>
-
-        <div class="about flex-center fcol">
-            <div class="content flex-center fcol" id="about">
-                <h1 class="title">About Me</h1>
-                <p>
-                    I am a Computer Science student at the University of Wisconsin - Eau Claire.
-                    I am expecting to graduate in May of 2023. My passions include Web Development and Deep/Machine Learning.
-                    I enjoy the process of Web Development as it allows for me to be creative and I find the development
-                    process unique and challenging. Every time I create something new, I need to devise the best way 
-                    to acheive the desired outcome.
-                </p>
+                <h2>
+                    A computer science student and aspring software engineer
+                </h2>
             </div>
-        </div>
 
-        <div class="skills fcol">
-            <div class="top-arrow"></div>
-
-            <div class="skills-content content flex-center fcol" id="skills">
-                <h1 class="title">Skills</h1>
-
-                <div class="skills-section">
-                    <div class="grid-item flex-center">
-                        <div class="skill flex-center fcol">
-                            <div class="skill-title">HTML</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item flex-center">    
-                        <div class="skill flex-center fcol">
-                            <div class="skill-title">CSS</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width:80%;"></div>
-                            </div>
-                        </div>  
-                    </div>   
-                    <div class="grid-item flex-center">
-                        <div class="skill flex-center fcol">
-                            <div class="skill-title">Javascript</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 60%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item flex-center">
-                        <div class="skill flex-center fcol">
-                            <div class="skill-title">Node.js</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 30%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item flex-center">
-                        <div class="skill flex-center fcol">
-                            <div class="skill-title">MySQL</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 60%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item flex-center">
-                        <div class="skill flex-center fcol">
-                            <div class="skill-title">MongoDB</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 40%;"></div>
-                            </div>
-                        </div>   
-                    </div>  
-                    <div class="grid-item flex-center">  
-                        <div class="skill flex-center fcol">
-                            <div class="skill-title">Python</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 70%;"></div>
-                            </div>
-                        </div>   
-                    </div>
-                    <div class="grid-item flex-center">  
-                        <div class="skill flex-center fcol">
-                            <div class="skill-title">TensorFlow</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%;"></div>
-                            </div>
-                        </div>  
-                    </div>  
-                    <div class="grid-item flex-center">  
-                        <div class="skill flex-center fcol">
-                            <div class="skill-title">Java</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 60%;"></div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="about flex-center fcol">
+                <div class="content flex-center fcol" id="about">
+                    <h1 class="title">About Me</h1>
+                    <p>
+                        I am a Computer Science student at the University of
+                        Wisconsin - Eau Claire. I am expecting to graduate in
+                        May of 2023. My passions include Web Development and
+                        Deep/Machine Learning. I enjoy the process of Web
+                        Development as it allows for me to be creative and I
+                        find the development process unique and challenging.
+                        Every time I create something new, I need to devise the
+                        best way to acheive the desired outcome.
+                    </p>
                 </div>
             </div>
 
-            <div class="bottom-arrow"></div>
-        </div>
+            <div class="skills fcol">
+                <div class="top-arrow"></div>
 
-        <div class="projects" id="projects">
-           <div class="content flex-center fcol">
-               <h1 class="title">Projects</h1>
+                <div
+                    class="skills-content content flex-center fcol"
+                    id="skills"
+                >
+                    <h1 class="title">Skills</h1>
 
-               <div class="projects-list flex-center">
-                   <a class="project consortium" href="https://www.ensemble-consortium.org/" target="_blank" rel=”noreferrer”>
-                        <div class="project-info flex-center fcol">
-                            <div class="project-title">Consortium</div>
-                            <div class="project-description">
-                                The Consortium project was created for a clients music group named 'Consortium'. This was my first ever serious 
-                                full stack web development project. My and the client are currently working together to make sure that it is to their
-                                liking. Further work will likely involve overhauls of the layout and additional backend and administrative features.
-                            </div>
-                       </div>
-                   </a>
-
-                   <a class="project tip-calculator" href="/projects/tip-calculator.html" rel=”noreferrer”>
-                        <div class="project-info flex-center fcol">
-                            <div class="project-title">Tip Calculator</div>
-                            <div class="project-description">
-                                This project is a simple tip calculator that is able to calculate a tip's amount and how it should be split amongst
-                                friends. This projects is based on HTML, CSS, and JS. It is a part of a series of projects that I made based on designs from Frontend Mentor.
+                    <div class="skills-section">
+                        <div class="grid-item flex-center">
+                            <div class="skill flex-center fcol">
+                                <div class="skill-title">HTML</div>
+                                <div class="skill-bar">
+                                    <div
+                                        class="skill-progress"
+                                        style="width: 90%"
+                                    ></div>
+                                </div>
                             </div>
                         </div>
-                    </a>
-                    
-                    <a class="project order-summary" href="/projects/order-summary.html" rel=”noreferrer”>
-                        <div class="project-info flex-center fcol">
-                            <div class="project-title">Order Summary</div>
-                            <div class="project-description">
-                                This project is a simple tip calculator that is able to calculate a tip's amount and how it should be split amongst
-                                friends. This projects is based on HTML, CSS, and JS. It is a part of a series of projects that I made based on designs from Frontend Mentor.
+                        <div class="grid-item flex-center">
+                            <div class="skill flex-center fcol">
+                                <div class="skill-title">CSS</div>
+                                <div class="skill-bar">
+                                    <div
+                                        class="skill-progress"
+                                        style="width: 80%"
+                                    ></div>
+                                </div>
                             </div>
                         </div>
-                    </a>
-               </div>
-           </div>
-        </div>
-
-    </main>
-
-
-    <footer id="contact" class="flex-center fcol">
-
-        <div class="content flex-center fcol">
-            <h1 class="title">Contact Me</h1>
-
-            <form name="contact" class="contact-form flex-center" method="POST" data-netlify="true">
-                
-                <div class="form-item fcol">
-                    <input type="text" name="name" id="contact-name" placeholder="Name">
+                        <div class="grid-item flex-center">
+                            <div class="skill flex-center fcol">
+                                <div class="skill-title">Javascript</div>
+                                <div class="skill-bar">
+                                    <div
+                                        class="skill-progress"
+                                        style="width: 60%"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item flex-center">
+                            <div class="skill flex-center fcol">
+                                <div class="skill-title">Node.js</div>
+                                <div class="skill-bar">
+                                    <div
+                                        class="skill-progress"
+                                        style="width: 30%"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item flex-center">
+                            <div class="skill flex-center fcol">
+                                <div class="skill-title">MySQL</div>
+                                <div class="skill-bar">
+                                    <div
+                                        class="skill-progress"
+                                        style="width: 60%"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item flex-center">
+                            <div class="skill flex-center fcol">
+                                <div class="skill-title">MongoDB</div>
+                                <div class="skill-bar">
+                                    <div
+                                        class="skill-progress"
+                                        style="width: 40%"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item flex-center">
+                            <div class="skill flex-center fcol">
+                                <div class="skill-title">Python</div>
+                                <div class="skill-bar">
+                                    <div
+                                        class="skill-progress"
+                                        style="width: 70%"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item flex-center">
+                            <div class="skill flex-center fcol">
+                                <div class="skill-title">TensorFlow</div>
+                                <div class="skill-bar">
+                                    <div
+                                        class="skill-progress"
+                                        style="width: 80%"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item flex-center">
+                            <div class="skill flex-center fcol">
+                                <div class="skill-title">Java</div>
+                                <div class="skill-bar">
+                                    <div
+                                        class="skill-progress"
+                                        style="width: 60%"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="form-item fcol">
-                    <input type="email" name="email" id="contact-email" placeholder="Email">
+                <div class="bottom-arrow"></div>
+            </div>
+
+            <div class="projects" id="projects">
+                <div class="content flex-center fcol">
+                    <h1 class="title">Projects</h1>
+
+                    <div class="projects-list flex-center">
+                        <a
+                            class="project consortium"
+                            href="https://www.ensemble-consortium.org/"
+                            target="_blank"
+                            rel="”noreferrer”"
+                        >
+                            <div class="project-info flex-center fcol">
+                                <div class="project-title">Consortium</div>
+                                <div class="project-description">
+                                    The Consortium project was created for a
+                                    clients music group named 'Consortium'. This
+                                    was my first ever serious full stack web
+                                    development project. My and the client are
+                                    currently working together to make sure that
+                                    it is to their liking. Further work will
+                                    likely involve overhauls of the layout and
+                                    additional backend and administrative
+                                    features.
+                                </div>
+                            </div>
+                        </a>
+
+                        <a
+                            class="project tip-calculator"
+                            href="/projects/tip-calculator.html"
+                            rel="”noreferrer”"
+                        >
+                            <div class="project-info flex-center fcol">
+                                <div class="project-title">Tip Calculator</div>
+                                <div class="project-description">
+                                    This project is a simple tip calculator that
+                                    is able to calculate a tip's amount and how
+                                    it should be split amongst friends. This
+                                    projects is based on HTML, CSS, and JS. It
+                                    is a part of a series of projects that I
+                                    made based on designs from Frontend Mentor.
+                                </div>
+                            </div>
+                        </a>
+
+                        <a
+                            class="project order-summary"
+                            href="/projects/order-summary.html"
+                            rel="”noreferrer”"
+                        >
+                            <div class="project-info flex-center fcol">
+                                <div class="project-title">Order Summary</div>
+                                <div class="project-description">
+                                    This project is a simple tip calculator that
+                                    is able to calculate a tip's amount and how
+                                    it should be split amongst friends. This
+                                    projects is based on HTML, CSS, and JS. It
+                                    is a part of a series of projects that I
+                                    made based on designs from Frontend Mentor.
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
+            </div>
+        </main>
 
-                <div class="form-item fcol">
-                    <textarea name="message" id="contact-message" placeholder="Your Message..."></textarea>
-                </div>
+        <footer id="contact" class="flex-center fcol">
+            <div class="content flex-center fcol">
+                <h1 class="title">Contact Me</h1>
 
-                <button type="submit" class="send-button">Send</button>
-            </form>
-        </div>
+                <form
+                    name="contact"
+                    class="contact-form flex-center"
+                    method="POST"
+                    data-netlify="true"
+                >
+                    <div class="form-item fcol">
+                        <input
+                            type="text"
+                            name="name"
+                            id="contact-name"
+                            placeholder="Name"
+                        />
+                    </div>
 
-        <div class="media-links flex-center">
-            <a href="mailto:mitchhaley5@gmail.com" target="_blank" rel=”noreferrer”>
-                <img src="/files/email.svg" alt="Github" class="icon" style="width:35px; height: 35px;">
-            </a>
+                    <div class="form-item fcol">
+                        <input
+                            type="email"
+                            name="email"
+                            id="contact-email"
+                            placeholder="Email"
+                        />
+                    </div>
 
-            <a href="https://github.com/Voyex/" target="_blank" rel=”noreferrer” >
-                <img src="/files/github.svg" alt="Github" class="icon" style="width:40px; height: 40px;">
-            </a>
-            <a href="https://www.linkedin.com/in/haleymj/" target="_blank" rel=”noreferrer”>
-                <img src="/files/linkedin.svg" alt="Github" class="icon" style="width:40px; height: 40px;">
-            </a>
-        </div>
-    </footer>
-</body>
+                    <div class="form-item fcol">
+                        <textarea
+                            name="message"
+                            id="contact-message"
+                            placeholder="Your Message..."
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="send-button">Send</button>
+                </form>
+            </div>
+
+            <div class="media-links flex-center">
+                <a
+                    href="mailto:mitchhaley5@gmail.com"
+                    target="_blank"
+                    rel="”noreferrer”"
+                >
+                    <img
+                        src="/files/email.svg"
+                        alt="Github"
+                        class="icon"
+                        style="width: 35px; height: 35px"
+                    />
+                </a>
+
+                <a
+                    href="https://github.com/Voyex/"
+                    target="_blank"
+                    rel="”noreferrer”"
+                >
+                    <img
+                        src="/files/github.svg"
+                        alt="Github"
+                        class="icon"
+                        style="width: 40px; height: 40px"
+                    />
+                </a>
+                <a
+                    href="https://www.linkedin.com/in/haleymj/"
+                    target="_blank"
+                    rel="”noreferrer”"
+                >
+                    <img
+                        src="/files/linkedin.svg"
+                        alt="Github"
+                        class="icon"
+                        style="width: 40px; height: 40px"
+                    />
+                </a>
+            </div>
+        </footer>
+    </body>
 </html>

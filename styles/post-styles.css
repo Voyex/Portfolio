@@ -1,24 +1,39 @@
 /* Mobile Animations */
 @keyframes blink {
-    0%{opacity: 0;}
-    49%{opacity: 0;}
-    50%{opacity: 1;}
-    99%{opacity: 1;}
-    100%{opacity: 0;}
+    0% {
+        opacity: 0;
     }
-
-@keyframes typing {
-    from {width: 0;}
-    to {width: 100%;}
+    49% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
-.nav-link:active,.nav-link:hover {
-    color: var(--supportingColor)
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.nav-link:active,
+.nav-link:hover {
+    color: var(--supportingColor);
 }
 
 .active,
 .skill:hover {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     transform: scale(1.2);
 }
@@ -31,19 +46,17 @@
 @keyframes hide-left {
     11% {
         transform: translateX(0);
-      }
+    }
     33% {
         transform: translateX(-1.65em);
         transform-origin: left;
     }
-    75%{
+    75% {
         transform: translateX(-1.65em);
     }
-    100%{
+    100% {
         transform: translateX(0);
     }
-
-
 }
 
 @keyframes show-left {
@@ -63,5 +76,4 @@
         transform: translateX(5.1em);
         color: var(--supportingColor);
     }
-
 }

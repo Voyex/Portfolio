@@ -1,55 +1,55 @@
 function toggleDropdown(action) {
-    if(window.innerWidth >= 1280) return;
+    if (window.innerWidth >= 1280) return;
 
-    const dropDownBar = document.getElementById('nav-links');
+    const dropDownBar = document.getElementById("nav-links");
 
     let toggle = null;
     let height = dropDownBar.offsetHeight;
 
-    dropDownBar.style.height = 'auto';
+    dropDownBar.style.height = "auto";
     const maxHeight = dropDownBar.offsetHeight;
     dropDownBar.style.height = height;
 
     clearInterval(toggle);
     // If an action is specified, overwrite default logic. Else, follow toggle logic.
-    if(action) {
-        if(action == 'close') toggle = setInterval(raise, 1);
-        if(action == 'open') toggle = setInterval(drop, 1);    
-    } else if(height == 0) toggle = setInterval(drop, 1);
+    if (action) {
+        if (action == "close") toggle = setInterval(raise, 1);
+        if (action == "open") toggle = setInterval(drop, 1);
+    } else if (height == 0) toggle = setInterval(drop, 1);
     else toggle = setInterval(raise, 1);
-
-
 
     function drop() {
         if (height >= maxHeight) {
-          clearInterval(toggle);
+            clearInterval(toggle);
         } else {
             height++;
-          dropDownBar.style.height = height + 'px';
+            dropDownBar.style.height = height + "px";
         }
-      }
+    }
 
     function raise() {
         if (height <= 0) {
             clearInterval(toggle);
         } else {
             height--;
-            dropDownBar.style.height = height + 'px';
+            dropDownBar.style.height = height + "px";
         }
     }
 }
 
 // changes skills as you scroll over them in mobile view.
 function mobileSkillScroll() {
-
     const skills = document.getElementsByClassName("skill");
 
     // Verifies that you are in mobile view
-    if(window.innerWidth >= 1280) {
+    if (window.innerWidth >= 1280) {
         // Removes active class from all skills (In case a user raises their resolution mid scroll).
-        for(let i = 0; i < skills.length; i++) {
-            if(skills[i].className.search(" active")){
-                skills[i].className = skills[i].className.replace(" active", "");
+        for (let i = 0; i < skills.length; i++) {
+            if (skills[i].className.search(" active")) {
+                skills[i].className = skills[i].className.replace(
+                    " active",
+                    ""
+                );
             }
         }
         return;
@@ -59,59 +59,58 @@ function mobileSkillScroll() {
     const skillHeight = skills[0].clientHeight;
     const headerHeight = 50;
     // The height at which a skill is activated
-    const activationHeight = window.innerHeight / 2 + (skillHeight / 2);
+    const activationHeight = window.innerHeight / 2 + skillHeight / 2;
     // The height at which the skill is deactivated
     const deactivationHeight = 0;
 
-    for(let i = 0; i < skills.length; i++) {
+    for (let i = 0; i < skills.length; i++) {
         const topFromTop = skills[i].getBoundingClientRect().top;
-        const bottomFromTop = skills[i].getBoundingClientRect().bottom; 
+        const bottomFromTop = skills[i].getBoundingClientRect().bottom;
 
-        if(topFromTop <= activationHeight && bottomFromTop >= deactivationHeight) {
-
+        if (
+            topFromTop <= activationHeight &&
+            bottomFromTop >= deactivationHeight
+        ) {
             // Removes active class from previous skills
-            for(let j = 0; j <= i; j++) {
-                if(skills[j].className.search(" active")){
-                    skills[j].className = skills[j].className.replace(" active", "");
+            for (let j = 0; j <= i; j++) {
+                if (skills[j].className.search(" active")) {
+                    skills[j].className = skills[j].className.replace(
+                        " active",
+                        ""
+                    );
                 }
             }
 
             skills[i].className += " active";
-        }
-        else if(skills[i].className.search(" active")){
+        } else if (skills[i].className.search(" active")) {
             skills[i].className = skills[i].className.replace(" active", "");
         }
     }
-
-
 }
 
 function goTo(id) {
     const toGo = document.getElementById(id);
-    
+
     const top = toGo.getBoundingClientRect().top;
 
     window.scrollBy({
         top: top - 75,
-        behavior: "smooth"
+        behavior: "smooth",
     });
 }
 
 function typeWriter() {
     const shown = document.getElementById("shown");
-    const hidden = document.getElementById("hidden")
-    
-    
+    const hidden = document.getElementById("hidden");
+
     let content = hidden.innerText;
     let typedContent = "";
 
     var loop = setInterval(addChars, 75);
 
     function addChars() {
-
         if (!content) {
             clearInterval(loop);
-
         } else {
             typedContent += content[0];
             content = content.substring(1);
@@ -126,27 +125,27 @@ function headerColor() {
     const intro = document.getElementById("intro");
     const contact = document.getElementById("contact");
     var introBottom = intro.getBoundingClientRect().bottom;
-    var contactTop = contact.getBoundingClientRect().top; 
+    var contactTop = contact.getBoundingClientRect().top;
 
     const root = document.querySelector(":root");
 
     //Changes header color based on position of intro elem
-    if(introBottom <= 50) { 
-        if(contactTop <= 50) {
+    if (introBottom <= 50) {
+        if (contactTop <= 50) {
             root.style.setProperty("--headerColor", "black");
             root.style.setProperty("--headerFontColor", "white");
             return;
         }
-            root.style.setProperty("--headerColor", "white");
-            root.style.setProperty("--headerFontColor", "black");
+        root.style.setProperty("--headerColor", "white");
+        root.style.setProperty("--headerFontColor", "black");
     } else {
         root.style.setProperty("--headerColor", "black");
         root.style.setProperty("--headerFontColor", "white");
     }
 }
 function loadCSS(fileName) {
-    const css = document.createElement('link');
-    css.rel='stylesheet';
-    css.href=`/styles/${fileName}`
+    const css = document.createElement("link");
+    css.rel = "stylesheet";
+    css.href = `/styles/${fileName}`;
     document.head.appendChild(css);
 }

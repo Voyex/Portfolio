@@ -1,4 +1,4 @@
-const emptyAmount = '$0.00';
+const emptyAmount = "$0.00";
 let tipPercentage = NaN;
 let billTotal = NaN;
 let numPeople = NaN;
@@ -6,34 +6,29 @@ let numPeople = NaN;
 function pageRefresh() {
     const buttons = document.getElementsByClassName("tip-button");
 
-    for(let i = 0; i < buttons.length; i++) {
-
+    for (let i = 0; i < buttons.length; i++) {
         buttons[i].style.backgroundColor = "var(--dark-cyan)";
         buttons[i].style.color = "white";
     }
 
     document.getElementById("form").reset();
-
 }
 
 function getTipPercentage(element) {
     const buttons = document.getElementsByClassName("tip-button");
     const custom = document.getElementById("custom-tip");
 
-    for(let i = 0; i < buttons.length; i++) {
-
-    buttons[i].style.backgroundColor = "var(--dark-cyan)";
-    buttons[i].style.color = "white";
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].style.backgroundColor = "var(--dark-cyan)";
+        buttons[i].style.color = "white";
     }
-
 
     if (element.id === "custom-tip") {
         tipPercentage = parseFloat(element.value / 100);
     } else {
-
         custom.value = "";
         element.style.backgroundColor = "var(--strong-cyan)";
-        element.style.color = "var(--dark-cyan)"
+        element.style.color = "var(--dark-cyan)";
         tipPercentage = element.value.slice(0, -1) / 100;
     }
     neumericErrorHandler(tipPercentage, 1);
@@ -54,16 +49,22 @@ function calculateTip() {
     billTotal = parseFloat(billTotal);
     numPeople = parseFloat(numPeople);
 
-    let totalPerPerson = ((tipPercentage * billTotal + billTotal) / numPeople).toFixed(2);
-    let tipPerPerson = (((tipPercentage * billTotal + billTotal) - billTotal) / numPeople).toFixed(2);
+    let totalPerPerson = (
+        (tipPercentage * billTotal + billTotal) /
+        numPeople
+    ).toFixed(2);
+    let tipPerPerson = (
+        (tipPercentage * billTotal + billTotal - billTotal) /
+        numPeople
+    ).toFixed(2);
 
     const tip = document.getElementById("tip-per-person");
     const total = document.getElementById("total-per-person");
 
-    if (totalPerPerson > 0 & tipPerPerson < Infinity) {
+    if ((totalPerPerson > 0) & (tipPerPerson < Infinity)) {
         tip.innerText = "$" + tipPerPerson;
         total.innerText = "$" + totalPerPerson;
-    } else { 
+    } else {
         tip.innerText = emptyAmount;
         total.innerText = emptyAmount;
     }
@@ -85,5 +86,4 @@ function neumericErrorHandler(toCheck, errorNum) {
             calculateTip();
         }
     }
-
 }
