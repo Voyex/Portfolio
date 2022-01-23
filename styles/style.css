@@ -248,7 +248,7 @@ main {
     content: "";
     display: inline-block;
     background-color: white;
-    height: 90%;
+    height: .9em;
     position: absolute;
     width: 2px;
     animation: blink 1.1s infinite 2.6s;
