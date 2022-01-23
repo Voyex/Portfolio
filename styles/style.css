@@ -55,20 +55,6 @@
          url('/files/fonts/roboto-v29-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
          url('/files/fonts/roboto-v29-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
 }
-  
-/* Mobile Animations */
-@keyframes blink {
-    0%{opacity: 0;}
-    49%{opacity: 0;}
-    50%{opacity: 1;}
-    99%{opacity: 1;}
-    100%{opacity: 0;}
-    }
-
-@keyframes typing {
-    from {width: 0;}
-    to {width: 100%;}
-}
 
 :root {
     --activeColor: #0054d1;
@@ -167,10 +153,6 @@ header > * {
     padding: 5px 10px 5px 10px;
     text-align: center;
     background-color: transparent;
-}
-
-.nav-link:active,.nav-link:hover {
-    color: var(--supportingColor)
 }
 
 .name {
@@ -357,13 +339,6 @@ main {
     transition: all .25s ease-in-out;
 }
 
-.active,
-.skill:hover {
-    background-color: rgba(0,0,0,0.5);
-    border-radius: 10px;
-    transform: scale(1.2);
-}
-
 .skill-title {
     font-size: 1.5em;
     margin-bottom: 10px;
@@ -508,10 +483,6 @@ footer{
     height: 30px;
 }
 
-.send-button:active {
-    background-color: var(--activeColor);
-}
-
 .media-links {
     display: flex;
     justify-content: space-evenly;
@@ -531,49 +502,6 @@ footer{
 }
 
 /* End of mobile CSS */
-
-/* Desktop Animations */
-@keyframes hide-left {
-    11% {
-        transform: translateX(0);
-      }
-    33% {
-        transform: translateX(-1.65em);
-        transform-origin: left;
-    }
-    75%{
-        transform: translateX(-1.65em);
-    }
-    100%{
-        transform: translateX(0);
-    }
-
-
-}
-
-@keyframes show-left {
-    0% {
-        color: var(--headerFontColor);
-    }
-    48% {
-        transform: translateX(5.1em);
-        transform-origin: left;
-        color: var(--headerFontColor);
-    }
-    /* 66% {
-        transform: translateX(90.5px);
-        color: red;  
-    } */
-    81% {
-        transform: translateX(5.1em);
-        color: var(--headerFontColor);
-    }
-    100% {
-        transform: translateX(5.1em);
-        color: var(--supportingColor);
-    }
-
-}
 
 @media (max-width: 450px) {
     .project {
