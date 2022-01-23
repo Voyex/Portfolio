@@ -30,6 +30,34 @@ body {
     text-align: center;
 }
 
+.home-link {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.home-link:hover,
+.home-link:active {
+    border-radius: 8px;
+    background-color: var(--light-desaturated-blue);
+}
+
+.back-arrow {
+    fill: var(--bright-blue);
+}
+
+.home-link p {
+    font-family:'Segoe UI', Verdana, sans-serif;
+    margin: 2px 0 0 0;
+    padding-left: 5px;
+    font-size: 24px;
+    color: var(--bright-blue);
+}
+
 .card{
     display: flex;
     flex-direction: column;
@@ -149,6 +177,7 @@ h1 {
 .attribution a { 
     color: hsl(228, 45%, 44%); 
 }
+
 @media (min-width: 550px) {
     .card {
         width: 500px;
