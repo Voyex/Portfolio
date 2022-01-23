@@ -165,6 +165,10 @@ main {
 
 }
 
+.intro > * {
+    margin: 10px 0 0 0;
+}
+
 .content {
     display: flex;
     flex-direction: column;
@@ -451,6 +455,24 @@ footer{
 
 .send-button:active {
     background-color: var(--activeColor);
+}
+
+.media-links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 200px;
+}
+
+
+.media-links a {
+  text-decoration: none;
+  height: min-content;
+  padding: 10px;
+}
+
+.icon {
+    color: white;
 }
 
 /* End of mobile CSS */
