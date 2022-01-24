@@ -202,23 +202,22 @@ main {
 .intro > * {
     margin: 10px 0 0 0;
 }
-
-.inline h1 {
+.inline {
     display: inline-block;
+}
+.inline h1 {
+    display: inline;
 }
 
 .typed {
-    position: relative;
     margin: 0;
     color: var(--supportingColor);
     font-size: 2rem;
     font-family: "Roboto-Mono", "Courier New", Courier, monospace;
-    overflow: wrap;
 }
 
 .typed-hidden {
     color: black;
-    text-align: center;
     margin: 0;
     font-size: 2rem;
     font-family: "Roboto-Mono", "Courier New", Courier, monospace;
@@ -266,6 +265,7 @@ main {
 .about p {
     margin: 0;
     padding: 0;
+    width: 90vw;
     max-width: 75ch;
     font-size: 1.5em;
 }

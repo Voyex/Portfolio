@@ -115,13 +115,12 @@ function typeWriter() {
         if (!content) {
             clearInterval(loop);
             shown.classList.add("blink");
-            hidden.remove();
         } else {
             typedContent += content[0];
             content = content.substring(1);
 
-            shown.innerText = typedContent;
-            hidden.innerText = content;
+            shown.innerText = typedContent + "\uFEFF";
+            hidden.innerText = "\uFEFF" + content;
         }
     }
 }
