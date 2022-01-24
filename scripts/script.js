@@ -156,9 +156,9 @@ function loadCSS(fileName) {
 
 // Fixes issue on mobile of the hiding navbar changing background image height
 function setBackgroundSize() {
-    if (window.innerWidth >= 1280) return;
-
     const skills = document.getElementById("skills");
+
+    if (window.innerWidth >= 1280) skills.style.backgroundSize = "cover";
 
     // let backgroundPath = window.getComputedStyle(skills).backgroundImage;
     // backgroundPath = backgroundPath.substring(
