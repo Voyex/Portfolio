@@ -203,7 +203,8 @@ main {
     margin: 10px 0 0 0;
 }
 .inline {
-    display: inline-block;
+    display: inline;
+    text-align: center;
 }
 .inline h1 {
     display: inline;
@@ -217,7 +218,8 @@ main {
 }
 
 .typed-hidden {
-    color: black;
+    color: red;
+    text-align: left;
     margin: 0;
     font-size: 2rem;
     font-family: "Roboto-Mono", "Courier New", Courier, monospace;
