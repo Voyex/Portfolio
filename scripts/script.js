@@ -57,7 +57,6 @@ function mobileSkillScroll() {
 
     // The height of a skill
     const skillHeight = skills[0].clientHeight;
-    const headerHeight = 50;
     // The height at which a skill is activated
     const activationHeight = window.innerHeight / 2 + skillHeight / 2;
     // The height at which the skill is deactivated
@@ -105,7 +104,7 @@ function typeWriter() {
 
     let content = hidden.innerText;
     let typedContent = "";
-    const typingSpeed = 75;
+    const typingSpeed = 10075;
 
     var loop = setInterval(addChars, typingSpeed);
 

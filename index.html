@@ -86,7 +86,10 @@
         <main>
             <div class="intro flex-center fcol" id="intro">
                 <div class="inline">
-                    <h1 class="typed" id="shown"></h1>
+                    <!-- Starts with a Zero Width No Breaking Space  in order
+                    to keep the insertion point on the line without disrupting
+                    the flow of the layout.-->
+                    <h1 class="typed" id="shown">&#xfeff;</h1>
                     <!-- Text here will show up with a typwrite effect on load.
                     Spaces need to be non-breaking spaces otherwise the h1 will 
                     resize while typing leadning to jittering.-->
