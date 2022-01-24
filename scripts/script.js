@@ -173,12 +173,19 @@ function setBackgroundSize() {
 
     // const aspectRatio = img.naturalWidth / img.naturalHeight;
 
-    const aspectRatio = 0.511;
+    const screenAspectRatio = window.outerWidth / window.outerHeight;
+    const imgAspectRatio = 0.511;
 
-    console.log(aspectRatio);
+    let imageWidth;
+    let imageHeight;
 
-    const screenHeight = window.screen.height;
-    const imageWidth = screenHeight * aspectRatio;
+    if (screenAspectRatio > imgAspectRatio) {
+        imageWidth = window.outerWidth;
+        imageHeight = imageWidth / imgAspectRatio;
+    } else {
+        imageHeight = window.outerHeight;
+        imageWidth = imageHeight * imgAspectRatio;
+    }
 
-    skills.style.backgroundSize = `${imageWidth} ${screenHeight}`;
+    skills.style.backgroundSize = `${imageWidth}px ${imageHeight}px`;
 }
