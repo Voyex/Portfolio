@@ -104,7 +104,7 @@ function typeWriter() {
 
     let content = hidden.innerText;
     let typedContent = "";
-    const typingSpeed = 10075;
+    const typingSpeed = 75;
 
     var loop = setInterval(addChars, typingSpeed);
 
