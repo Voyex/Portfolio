@@ -104,6 +104,7 @@ function typeWriter() {
 
     let content = hidden.innerText;
     let typedContent = "";
+
     const typingSpeed = 75;
 
     var loop = setInterval(addChars, typingSpeed);
@@ -111,6 +112,7 @@ function typeWriter() {
     function addChars() {
         if (!content) {
             clearInterval(loop);
+            shown.classList.add("blink");
         } else {
             typedContent += content[0];
             content = content.substring(1);
