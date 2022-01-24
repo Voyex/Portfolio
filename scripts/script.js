@@ -115,6 +115,7 @@ function typeWriter() {
         if (!content) {
             clearInterval(loop);
             shown.classList.add("blink");
+            hidden.remove();
         } else {
             typedContent += content[0];
             content = content.substring(1);
@@ -179,5 +180,5 @@ function setBackgroundSize() {
     const screenHeight = window.screen.height;
     const imageWidth = screenHeight * aspectRatio;
 
-    skills.style.backgroundSize = `${screenHeight} ${imageWidth}`;
+    skills.style.backgroundSize = `${imageWidth} ${screenHeight}`;
 }
