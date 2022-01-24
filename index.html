@@ -22,6 +22,7 @@
     <body
         onload="typeWriter(); goTo('intro'); loadCSS('post-styles.css');"
         onscroll="headerColor(); mobileSkillScroll();"
+        onresize="setBackgroundSize();"
     >
         <script defer="defer" src="scripts/script.js"></script>
 
@@ -118,13 +119,10 @@
                 </div>
             </div>
 
-            <div class="skills fcol">
+            <div class="skills fcol" id="skills">
                 <div class="top-arrow"></div>
 
-                <div
-                    class="skills-content content flex-center fcol"
-                    id="skills"
-                >
+                <div class="skills-content content flex-center fcol">
                     <h1 class="title">Skills</h1>
 
                     <div class="skills-section">

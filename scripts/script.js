@@ -1,3 +1,5 @@
+window.addEventListener("resize", setBackgroundSize());
+
 function toggleDropdown(action) {
     if (window.innerWidth >= 1280) return;
 
@@ -150,4 +152,32 @@ function loadCSS(fileName) {
     css.rel = "stylesheet";
     css.href = `/styles/${fileName}`;
     document.head.appendChild(css);
+}
+
+// Fixes issue on mobile of the hiding navbar changing background image height
+function setBackgroundSize() {
+    if (window.innerWidth >= 1280) return;
+
+    const skills = document.getElementById("skills");
+
+    // let backgroundPath = window.getComputedStyle(skills).backgroundImage;
+    // backgroundPath = backgroundPath.substring(
+    //     backgroundPath.lastIndexOf("/") + 1
+    // );
+    // backgroundPath = backgroundPath.substring(0, backgroundPath.length - 2);
+    // backgroundPath = `/files/${backgroundPath}`;
+
+    // const img = new Image();
+    // img.src = backgroundPath;
+
+    // const aspectRatio = img.naturalWidth / img.naturalHeight;
+
+    const aspectRatio = 0.511;
+
+    console.log(aspectRatio);
+
+    const screenHeight = window.outerHeight;
+    const imageWidth = screenHeight * aspectRatio;
+
+    skills.style.backgroundSize = `${screenHeight} ${imageWidth}`;
 }
