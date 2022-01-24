@@ -287,9 +287,8 @@ main {
 
 .top-arrow {
     min-height: 4vw;
-    width: 100%;
     background-image: url("../files/white-arrow.svg");
-    background-size: contain;
+    background-size: 100vw auto;
     background-repeat: no-repeat;
 }
 
@@ -329,9 +328,8 @@ main {
 }
 .bottom-arrow {
     min-height: 4vw;
-    width: 100%;
     background-image: url("../files/transparent-arrow.svg");
-    background-size: contain;
+    background-size: 100vw auto;
     background-repeat: no-repeat;
 }
 
