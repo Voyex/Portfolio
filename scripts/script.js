@@ -179,6 +179,8 @@ function setBackgroundSize() {
     let imageWidth;
     let imageHeight;
 
+    console.log(window.screen.availHeight);
+
     if (screenAspectRatio > imgAspectRatio) {
         imageWidth = window.outerWidth;
         imageHeight = imageWidth / imgAspectRatio;
