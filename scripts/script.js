@@ -176,7 +176,7 @@ function setBackgroundSize() {
 
     console.log(aspectRatio);
 
-    const screenHeight = window.outerHeight;
+    const screenHeight = window.screen.availHeight;
     const imageWidth = screenHeight * aspectRatio;
 
     skills.style.backgroundSize = `${screenHeight} ${imageWidth}`;
