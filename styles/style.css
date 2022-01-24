@@ -272,7 +272,7 @@ main {
 
 /* Skills Section */
 .skills {
-    background: url("../files/schematic-vertical.webp") no-repeat center center
+    background: url("../files/schematic-vertical.webp") no-repeat top center
         fixed;
     background-size: cover;
     display: flex;

@@ -189,5 +189,4 @@ function setBackgroundSize() {
     }
 
     skills.style.backgroundSize = `${imageWidth}px ${imageHeight}px`;
-    console.log(window.getComputedStyle(skills).backgroundSize);
 }
