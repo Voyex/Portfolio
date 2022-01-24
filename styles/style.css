@@ -218,6 +218,7 @@ main {
 }
 
 .typed-hidden {
+    color: black;
     margin: 0;
     font-size: 2rem;
     font-family: "Roboto-Mono", "Courier New", Courier, monospace;
