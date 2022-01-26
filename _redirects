@@ -1,4 +1,4 @@
 # Redirects
-http://mitchhaley.com/  https://mitchhaley.com/ 301
+http://mitchhaley.com/home  https://mitchhaley.com/ 301!
 
-http://mitchhaley.com/  https://mitchhaley.com/
+http://mitchhaley.com/*  https://mitchhaley.com/* 301!
