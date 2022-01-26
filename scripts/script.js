@@ -160,11 +160,8 @@ function setBackgroundSize() {
 
     if (!/Mobi|Android/i.test(navigator.userAgent)) {
         skills.style.backgroundSize = "cover";
-        console.log("desktop");
         return;
     }
-
-    console.log(navigator.userAgent);
 
     // let backgroundPath = window.getComputedStyle(skills).backgroundImage;
     // backgroundPath = backgroundPath.substring(
