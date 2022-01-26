@@ -178,19 +178,17 @@ function setBackgroundSize() {
 
     // const aspectRatio = img.naturalWidth / img.naturalHeight;
 
-    const screenAspectRatio =
-        document.documentElement.clientWidth /
-        document.documentElement.clientHeight;
+    const screenAspectRatio = screen.availWidth / screen.availHeight;
     const imgAspectRatio = 0.511;
 
     let imageWidth;
     let imageHeight;
 
     if (screenAspectRatio > imgAspectRatio) {
-        imageWidth = document.documentElement.clientWidth;
+        imageWidth = screen.availWidth;
         imageHeight = imageWidth / imgAspectRatio;
     } else {
-        imageHeight = document.documentElement.clientHeight;
+        imageHeight = screen.availHeight;
         imageWidth = imageHeight * imgAspectRatio;
     }
 
