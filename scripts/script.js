@@ -147,6 +147,7 @@ function headerColor() {
         root.style.setProperty("--headerFontColor", "white");
     }
 }
+
 function loadCSS(fileName) {
     const css = document.createElement("link");
     css.rel = "stylesheet";
