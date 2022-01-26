@@ -174,7 +174,7 @@ header > * {
     height: 3px;
 }
 
-.nav-links {
+nav {
     z-index: 2;
     justify-content: flex-start;
     flex-basis: 100%;
@@ -460,10 +460,10 @@ footer {
         display: none;
     }
 
-    .nav-links {
+    nav {
         flex-basis: auto;
         flex-direction: row;
-        min-height: min-content;
+        height: min-content;
     }
 
     .skills {
