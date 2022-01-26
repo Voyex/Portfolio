@@ -174,7 +174,7 @@ header > * {
     height: 3px;
 }
 
-nav {
+.nav-links {
     z-index: 2;
     justify-content: flex-start;
     flex-basis: 100%;
@@ -460,7 +460,7 @@ footer {
         display: none;
     }
 
-    nav {
+    .nav-links {
         flex-basis: auto;
         flex-direction: row;
         height: min-content;
