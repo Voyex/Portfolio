@@ -358,6 +358,13 @@ main {
     text-decoration: none;
 }
 
+.project:hover,
+.project:active {
+    transition: 0.5s;
+    transform: scale(1.05);
+    box-shadow: 10px 10px 10px grey;
+}
+
 .consortium {
     background-image: url(../files/projects/consortium/Consortium.webp);
 }
