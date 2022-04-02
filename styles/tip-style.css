@@ -201,8 +201,13 @@ i {
     margin: 0;
 }
 
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
 .attribution a {
     font-size: 14px;
+    color: hsl(228, 45%, 44%);
 }
 
 @media (max-width: 425px) {
