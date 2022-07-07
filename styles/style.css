@@ -278,6 +278,7 @@ main {
     background-size: cover;
     display: flex;
     justify-content: space-between;
+    background-color: #02706d;
 }
 
 .skills-content {
