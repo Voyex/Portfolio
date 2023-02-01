@@ -17,11 +17,12 @@
         <meta name="theme-color" content="#000000" />
     </head>
     <body
-        onload="typeWriter(); goTo('intro'); loadCSS('post-styles.css'); setBackgroundSize();"
+        onload="typeWriter(); goTo('intro'); loadCSS('post-styles.css'); setBackgroundSize(); initCanvas('particle-canvas', '../files/config/particleConfig.json');"
         onscroll="headerColor(); mobileSkillScroll();"
         onresize="setBackgroundSize()"
     >
         <script defer="defer" src="scripts/script.js"></script>
+        <script defer="defer" src="scripts/particle.js"></script>
 
         <header id="header">
             <div class="top-bar flex-center">
@@ -82,23 +83,27 @@
         </header>
 
         <main>
+            <!-- Canvas where the particles will be drawn onto -->
+            <canvas id="particle-canvas"></canvas>
             <div class="intro flex-center fcol" id="intro">
-                <div class="inline">
-                    <!-- Starts with a Zero Width No Breaking Space  in order
-                    to keep the insertion point on the line without disrupting
-                    the flow of the layout.-->
-                    <h1 class="typed" id="shown">&#xfeff;</h1>
-                    <!-- Text here will show up with a typwrite effect on load.
-                    Spaces need to be non-breaking spaces otherwise the h1 will 
-                    resize while typing leadning to jittering.-->
-                    <h1 class="typed-hidden" id="hidden">
-                        Hello World! I'm Mitchell Haley.
-                    </h1>
+                <div id="intro-wrapper">
+                    <div class="inline">
+                        <!-- Starts with a Zero Width No Breaking Space  in order
+                        to keep the insertion point on the line without disrupting
+                        the flow of the layout.-->
+                        <h1 class="typed" id="shown">&#xfeff;</h1>
+                        <!-- Text here will show up with a typwrite effect on load.
+                        Spaces need to be non-breaking spaces otherwise the h1 will 
+                        resize while typing leadning to jittering.-->
+                        <h1 class="typed-hidden" id="hidden">
+                            Hello World! I'm Mitchell Haley.
+                        </h1>
+                    </div>
+                    <h2>
+                        A software engineer intern with a passion for web
+                        development
+                    </h2>
                 </div>
-                <h2>
-                    A software engineer intern with a passion for web
-                    development
-                </h2>
             </div>
 
             <div class="about flex-center fcol">
