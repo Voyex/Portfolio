@@ -26,14 +26,14 @@ async function initCanvas(canvasID, configPath) {
     // Handle errors in retrieveing the file
     if (response.status !== 200) {
       if (response.status === 404) {
-        throw new Error(`Error 404: getting the config file please check that the path is correct.\nPath: ${configPath}`);
+        throw new Error(`getting the config file please check that the path is correct.\nPath: ${configPath}`);
       } else {
-        throw new Error("Error: Something unexpected happened and the config file could not be retrieved");
+        throw new Error("Something unexpected happened and the config file could not be retrieved");
       }
     }
     config = await response.json();
   } catch (e) {
-    console.error(`Error loading Config: ${e}`)
+    console.error(`Problem creating config JSON: ${e}`)
     return;
   }
 
