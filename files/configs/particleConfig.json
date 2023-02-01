@@ -1,0 +1,9 @@
+{
+  "particleColor": "white",
+  "particleRadius": 3,
+  "maxConnections": 2,
+  "lineDistance": 150,
+  "lineWidth": 1,
+  "lineColor": "grey",
+  "nParticles": 100
+}
