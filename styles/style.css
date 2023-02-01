@@ -192,9 +192,17 @@ main {
     min-height: 200vh;
 }
 
+#particle-canvas {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: black;
+    z-index: -1;
+}
+
 .intro {
     color: white;
-    background-color: black;
+    background-color: transparent;
     min-height: 100vh;
     max-width: 100vw;
 }
@@ -202,6 +210,14 @@ main {
 .intro > * {
     margin: 10px 0 0 0;
 }
+
+#intro-wrapper * {
+	text-shadow: -3px 3px #000,
+				  3px 3px #000,
+				 3px -3px #000,
+				-3px -3px #000;
+}
+
 .inline {
     display: inline;
     text-align: center;
