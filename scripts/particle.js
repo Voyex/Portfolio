@@ -68,8 +68,12 @@ async function initCanvas(canvasID, configPath) {
 function createParticles(config, canvas, ctx) {
   const canvasWidth = canvas.getAttribute('width');
   const canvasHeight = canvas.getAttribute('height');
+  
+  // Calulate the partice density based on a simple density function
+  const canvasArea = canvasWidth * canvasHeight;
+  const nParticles = config.particleDensity * (canvasArea / 10000);
 
-  for (let i = 0; i < config.nParticles; i++) {
+  for (let i = 0; i < nParticles; i++) {
     randomX = Math.random() * canvasWidth;
     randomY = Math.random() * canvasHeight;
     createCircle(ctx, randomX, randomY, config.particleRadius);
