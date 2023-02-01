@@ -102,7 +102,6 @@ header {
     top: 0;
     width: 100%;
     color: var(--headerFontColor);
-    background-color: var(--headerColor);
     font-family: "Roboto", sans-serif;
     display: flex;
     justify-content: space-between;
@@ -131,6 +130,7 @@ header > * {
 
 .top-bar > * {
     padding: 10px;
+    background-color: var(--headerColor);
 }
 .name {
     font-size: 25px;
@@ -196,7 +196,7 @@ main {
     height: 100%;
     width: 100%;
     position: absolute;
-    background-color: black;
+    background-color: var(--headerColor);
     z-index: -1;
 }
 
@@ -211,11 +211,15 @@ main {
     margin: 10px 0 0 0;
 }
 
-#intro-wrapper * {
-	text-shadow: -3px 3px #000,
-				  3px 3px #000,
-				 3px -3px #000,
-				-3px -3px #000;
+#intro-wrapper {
+    background-color: var(--headerColor);
+    border-radius: 10px;
+    box-shadow: 0 0 30px var(--headerColor);
+    padding: 5px;
+}
+
+#intro-wrapper h2 {
+    margin-bottom: 0;
 }
 
 .inline {
@@ -487,7 +491,7 @@ footer {
     .nav-links {
         flex-basis: auto;
         flex-direction: row;
-        height: min-content;
+        height: max-content;
     }
 
     .skills {
